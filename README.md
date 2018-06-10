@@ -1,10 +1,10 @@
-#小程序
-##目录结构
+# 小程序
+## 目录结构
 小程序的基本目录结构包含pages文件夹、utils文件夹、以及全局的配置文件。
 ![小程序目录结构](./小程序/img/目录结构.jpg )
-###pages文件夹
+### pages文件夹
 该文件夹用于存放小程序页面，每个页面为一个文件夹，包含4个文件
-![Alt text](./pages.jpg)
+![Alt text](./小程序/img/pages.jpg)
 *.js :  该页面的js文件
 ```
 let app = getApp();  //通过getApp（）获取全局App实例
@@ -54,7 +54,7 @@ Page({
 ```
 
 
-###全局配置文件
+### 全局配置文件
 #### app.js
 小程序全局逻辑，需要一个App()函数，该函数接受一个object
 ```
@@ -69,14 +69,14 @@ Page({
 ```
 #### app.json
 小程序全局配置：
-######pages：小程序页面路径   （Array）
+###### pages：小程序页面路径   （Array）
 ```
 "pages":[
 	"pages/index/index" // 第一项为小程序打开时的页面
 	"pages/logs/logs"
 ]
 ```
-######window：小程序窗口表现    （Object）
+###### window：小程序窗口表现    （Object）
 ```
 "window":{
     "backgroundTextStyle":"light",
@@ -108,7 +108,7 @@ Page({
 	}
 ```
 效果：
-![Alt text](./tabBar.jpg)
+![Alt text](./小程序/img/tabBar.jpg)
 ###### networkTimeout：设置网络请求的超时时间    （Object）
 ![Alt text](./请求超时时间.jpg)
 ###### debug：是否开启debug       （Boolean）
@@ -116,5 +116,5 @@ Page({
 "debug": true
 ```
 效果：
-![Alt text](./debug.jpg)
+![Alt text](./小程序/img/debug.jpg)
 #### app.wxss   全局样式
