@@ -1,9 +1,11 @@
 # 小程序
 ## 目录结构
 小程序的基本目录结构包含pages文件夹、utils文件夹、以及全局的配置文件。
+
 ![小程序目录结构](./小程序/img/目录结构.jpg )
 ### pages文件夹
 该文件夹用于存放小程序页面，每个页面为一个文件夹，包含4个文件
+
 ![Alt text](./小程序/img/pages.jpg)
 *.js :  该页面的js文件
 ```
@@ -108,13 +110,16 @@ Page({
 	}
 ```
 效果：
+
 ![Alt text](./小程序/img/tabBar.jpg)
 ###### networkTimeout：设置网络请求的超时时间    （Object）
-![Alt text](./请求超时时间.jpg)
+
+![Alt text](./小程序/img/请求超时时间.jpg)
 ###### debug：是否开启debug       （Boolean）
 ```
 "debug": true
 ```
 效果：
+
 ![Alt text](./小程序/img/debug.jpg)
 #### app.wxss   全局样式
