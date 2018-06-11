@@ -8,3 +8,12 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+
+*{
+	margin: 0;
+}
+::-webkit-scrollbar{   /* 隐藏scroll-view的滚动条 */
+	width: 0;
+	height: 0;
+	color: transparent;
+}

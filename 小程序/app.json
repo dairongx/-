@@ -27,6 +27,5 @@
 				"selectedIconPath": "./img/account.png"
 			}
 		]
-	},
-	"debug": false
+	}
 }
