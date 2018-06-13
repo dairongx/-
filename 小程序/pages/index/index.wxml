@@ -1,17 +1,27 @@
-<!--index.wxml-->
-<!-- <view class="container">
-    <view class="userinfo">
-        <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-        <block wx:else>
-            <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-            <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-        </block>
-    </view>
-    <view hidden="{{a?true:false}}">
-        <text>text</text>
-    </view>
-	<button bindtap="toggle">toggle</button>
-</view> -->
 <view>
-主页
+    {{title}}
+</view>
+<view wx:for="{{list}}" wx:key="{{index}}">
+    {{item}}
+</view>
+<view bindtap="click">test</view>
+
+<view style="margin-top: 50rpx;">
+	{{title}}
+    <view bindtap="change">change</view>
+</view>
+
+<view style="margin-top: 50rpx;">
+	{{title}}
+    <view bindtap="change2">change2</view>
+</view>
+
+<view style="margin-top: 50rpx;">
+	<view wx:for="{{arr}}" wx:key="{{index}}">a:{{item.a}}--b:{{item.b}}</view>
+	<button bindtap="change3">change3</button>
+</view>
+
+<view style="margin-top: 50rpx;">
+	<view wx:for="{{arr}}" wx:key="{{index}}">a:{{item.a}}--b:{{item.b}}</view>
+	<button bindtap="change4">change4</button>
 </view>

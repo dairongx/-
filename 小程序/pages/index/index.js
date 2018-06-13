@@ -4,66 +4,60 @@ const app = getApp()
 
 Page({
 	data: {
-		motto: 'Hello World',
-		userInfo: {},
-		hasUserInfo: false,
-		canIUse: wx.canIUse('button.open-type.getUserInfo'),
-		a: false
+		title: '小程序',
+		list:['a','b','c','d'],
+		arr: [
+			{
+				a: 'aaa',
+				b: true
+			},
+			{
+				a: 'bbb',
+				b: false
+			}
+		]
 	},
 
 	onLoad: function () {
-		if (app.globalData.userInfo) {
-			this.setData({
-				userInfo: app.globalData.userInfo,
-				hasUserInfo: true
-			})
-		} else if (this.data.canIUse) {
-			// 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-			// 所以此处加入 callback 以防止这种情况
-			app.userInfoReadyCallback = res => {
-				this.setData({
-					userInfo: res.userInfo,
-					hasUserInfo: true
-				})
-			}
-		} else {
-			// 在没有 open-type=getUserInfo 版本的兼容处理
-			wx.getUserInfo({
-				success: res => {
-					app.globalData.userInfo = res.userInfo
-					this.setData({
-						userInfo: res.userInfo,
-						hasUserInfo: true
-					})
-				}
-			})
-		}
+
 	},
-	getUserInfo: function (e) {
-		app.globalData.userInfo = e.detail.userInfo
+	click:function(e){
+		console.log(e)
+	},
+	change:function(){
+		let title = this.data.title;
+		console.log(title);
+		this.data.title = '改变';
+		console.log(this.data.title);
+	},
+	change2:function(){
+		this.data.title = '改变';
+		console.log(this.data.title);
 		this.setData({
-			userInfo: e.detail.userInfo,
-			hasUserInfo: true
+			title: 'setData改变了'
+		})
+		console.log(this.data.title);
+	},
+	change3:function(){
+		let arr = this.data.arr;
+		for(let i=0;i<arr.length;i++){
+			arr[i].b = !arr[i].b
+		}
+		this.setData({
+			arr: arr
 		})
 	},
-	toggle() {
-		//   wx.showModal({
-		// 	  title: '提示',
-		// 	  content: 'toggle',
-		// 	  success(res){
-		// 		  console.log(res)
-		// 		  console.log(1);
-		// 	  },
-		// 	  fail(){
-		// 		  console.log(2);
-		// 	  }
-		//   })
-		wx.showToast({
-			title: 'loading',
-			icon: 'loading'
+	change4:function(){
+		//改变arr[0].b的值
+		//1.
+		// this.setData({
+		// 	'arr[0].b': false
+		// })
+
+		//2.
+		let b = 'arr[0].b';
+		this.setData({
+			[b]: false
 		})
-			this.setData({
-				a: !this.data.a
-			})
 	}
 })

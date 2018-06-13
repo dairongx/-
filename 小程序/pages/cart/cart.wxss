@@ -1,0 +1,139 @@
+/* pages/cart/cart.wxss */
+
+.carts {
+    width: 100vw;
+    height: 98vh;
+    padding-top: 2vh;
+    font-size: 16px;
+}
+
+.carts scroll-view {
+    height: calc(86vh - 1px);
+    overflow: hidden;
+    background-color: #e2e2e2;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+
+.cart {
+    height: 20vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    margin-bottom: 10rpx;
+}
+
+.cart:last-child {
+    margin-bottom: 0;
+}
+
+.cart .check {
+    display: block;
+    width: 60rpx;
+    padding-left: 20rpx;
+}
+
+.cart .cart_img {
+    width: 180rpx;
+    height: 180rpx;
+    border: 1px solid #ccc;
+}
+
+.cart .cart_img image {
+    width: 100%;
+    height: 100%;
+}
+
+.cart .cart_info {
+    width: calc(100% - 300rpx);
+    padding-left: 40rpx;
+}
+
+.cart .info_title {
+    margin-bottom: 30rpx;
+}
+
+.cart .title {
+    display: inline-block;
+    width: 65%;
+}
+
+.cart .price {
+    float: right;
+    padding-right: 30rpx;
+}
+
+.cart .info_num {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart .num {
+    display: flex;
+    width: 180rpx;
+    padding-right: 30rpx;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart .num .btn {
+    width: 50rpx;
+    height: 50rpx;
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    line-height: 50rpx;
+    border: 1px solid #ccc;
+    border-radius: 0;
+}
+
+.cart .num input {
+    width: 60rpx;
+    height: 50rpx;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    min-height: 50rpx;
+}
+
+.bottom_total {
+    display: flex;
+    height: 12vh;
+    flex-direction: row;
+    align-items: center;
+    border-top: 1px solid #ccc;
+}
+
+.bottom_total .selectAll {
+    padding-left: 20rpx;
+    width: 180rpx;
+    line-height: 12vh;
+}
+
+.bottom_total .sum {
+    width: calc(100% - 25vw - 200rpx);
+    line-height: 12vh;
+    font-size: 18px;
+}
+
+.bottom_total .sum text {
+    font-size: 16px;
+    color: #ff5e3a;
+    padding-left: 5rpx;
+}
+
+.bottom_total .btn {
+    width: 25vw;
+    height: 12vh;
+    background-color: #ff5e3a;
+    color: #fff;
+    line-height: 12vh;
+    text-align: center;
+}

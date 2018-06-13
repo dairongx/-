@@ -3,25 +3,28 @@
 ### 数据绑定：使用{{}}
 ```
 wxml: 
-	<view>{{num}}</view>		
-	<block wx:for="{{arr}}">
-		<view>{{item}}</view>
-	</block>	
+	<view>{{title}}</view>
+	<view wx:for="{{list}}" wx:key="{{index}}">
+		{{item}}
+	</view>	
 js:       
 	Page（{
 		data：{            //只能通过setData改变data里的值
-			num： 12,
-			arr: [1,2,3]
+			title: '小程序',
+			list:['a','b','c','d']
 		}
 	}）
 ```
+
+![Alt text](./img/数据绑定.jpg)
+
 ### 列表渲染：  wx:for
 ```
 <block wx:for="{{arr}}">
 		<view>{{index}}--{{item}}</view>
 </block> 
      /*   默认下标 index，当前项默认为item
-          可以使用wx:for-item="aa" 将默认item改为aa
+          可以使用wx:for-item="list" 将默认item改为list
               使用wx:for-index="ix"  将index改为ix   
      */
 ```
@@ -43,3 +46,34 @@ wx：else             // else    else渲染
 ```
 hidden="{{hide}}"  // hide=true时隐藏，false显示
 ```
+### 事件
+bind:事件类型 或 bind事件类型  bind事件绑定不阻止冒泡
+如：
+```
+bind:tap              bindtap               触摸事件
+bind:longtap          bindlongtap           长按事件
+```
+catch:事件类型 或 catch事件类型   catch事件绑定阻止冒泡
+如：
+```
+catch:bind            catchtap          
+catch:longtap         catchlongtap
+```
+事件使用：
+```
+<view bindtap="click">test</view>  // 触摸后触发click函数
+js:
+	click:function(e){   // 事件处理函数接收一个参数e
+		console.log(e)
+	}
+```
+以上打印出如下
+
+![Alt text](./img/e.jpg)
+
+## wxss
+与css一致，多了一种尺寸单位rpx
+### rpx：可根据屏幕进行自适应
+
+
+
