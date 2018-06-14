@@ -1,2 +1,7 @@
 <!--pages/test/test.wxml-->
-<text>pages/test/test.wxml</text>
+<view>
+    <model show='{{show}}' title='标题，提示' content='这是一条内容' bind:cancel='cancel' bind:confirm='confirm'></model>
+    <button bindtap='click'>btn</button>
+</view>
+<text>pppp</text>
+<text>pppp</text>

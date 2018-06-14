@@ -1,0 +1,10 @@
+<view class='mask' wx:if="{{show}}">
+    <view class='model'>
+         <view class='title'>{{title}}</view>
+         <view class='content'>{{content}}</view>
+         <view class='btn'>
+              <view class='cancel' bindtap='_cancel'>{{cancel}}</view>
+              <view class='confirm' bindtap='_confirm'>{{confirm}}</view>
+         </view>
+    </view>
+</view>

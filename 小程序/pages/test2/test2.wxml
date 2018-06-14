@@ -1,0 +1,17 @@
+<!--pages/test2/test2.wxml-->
+
+<view>
+    <view>省市区选择器2</view>
+    <view>{{pro}}--{{city}}--{{con}}</view>
+    <picker-view class='pic' value="{{value}}" bindchange="bindchange" value='{{addr}}'>
+        <picker-view-column>
+            <view wx:for='{{pros}}' wx:key='index'>{{item}}</view>
+        </picker-view-column>
+        <picker-view-column>
+            <view wx:for='{{citys}}' wx:key='index'>{{item}}</view>
+        </picker-view-column>
+        <picker-view-column>
+            <view wx:for='{{cons}}' wx:key='index'>{{item}}</view>
+        </picker-view-column>
+    </picker-view>
+</view>

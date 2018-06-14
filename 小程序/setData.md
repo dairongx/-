@@ -1,6 +1,6 @@
 #小程序学习
 ## setData
-小程序的视图层是以Webiew作为渲染载体，逻辑层是由独立的JavaScriptCore作为运行环境的，所以在js中直接修改data是无法触发视图的更新。需要用setData来实现更改data更新视图的目的。
+在js中直接修改data是无法触发视图的更新。需要用setData来实现更改data更新视图的目的。
 ```
 <view style="margin-top: 50rpx;">
 	{{title}}

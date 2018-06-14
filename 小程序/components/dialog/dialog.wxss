@@ -1,0 +1,46 @@
+/* components/dialog/dialog.wxss */
+.mask{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,.3);
+}
+.model{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 70vw;
+	text-align: center;
+	background-color: #fff;
+	border-radius: 5rpx;
+}
+.title{
+	padding: 30rpx 20rpx 0;
+	font-size: 16px;
+	line-height: 1.6;
+}
+.content{
+	margin: 40rpx 0;
+	font-size: 14px;
+	line-height: 1.4;
+	color: #666;
+}
+.btn{
+	display: flex;
+	flex-direction: row;
+	height: 80rpx;
+	line-height: 80rpx;
+	border-top: 1px solid #ccc;
+	font-size: 14px;
+}
+.btn .cancel{
+	width: calc(50% - 1px);
+	border-right: 1px solid #ccc;
+}
+.btn .confirm{
+	width: 50%;
+	color: #20c050;
+}
