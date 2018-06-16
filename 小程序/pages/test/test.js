@@ -7,7 +7,11 @@ Page({
 	 * 页面的初始数据
 	 */
 	data: {
-		show: false
+		show: false,
+		value: 2,
+		value2: 6.4,
+		size: 30,
+		disable: true
 	},
 	click() {
 		this.setData({
@@ -26,11 +30,23 @@ Page({
 			show: false
 		})
 	},
+	change:function(e){
+		let value = e.detail.value;
+		this.setData({
+			value: value
+		})
+	},
+	change2: function (e) {
+		let value2 = e.detail.value;
+		this.setData({
+			value2: value2
+		})
+	},
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function (options) {
-		console.log(app.globalData.a)
+		// console.log(app.globalData.a)
 	},
 
 	/**

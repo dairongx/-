@@ -1,5 +1,6 @@
 {
 	"usingComponents": {
-		"model": "../../components/dialog/dialog" 
+		"model": "../../components/dialog/dialog",
+		"rate": "../../components/rate/rate"
 	}
 }

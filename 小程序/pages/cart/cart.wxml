@@ -17,7 +17,7 @@
                         <text class='total'>￥{{item.price*item.count.quantity}}</text>
                         <view class='num'>
                             <text class='btn' id='reduce' bindtap='countChange' data-index='{{index}}'>-</text>
-                            <input type='number' maxlength='2' id='input' bindinput='countChange' data-index='{{index}}' value='{{item.count.quantity}}'></input>
+                            <input type='number' maxlength='2' id='input' bindblur='countChange' data-index='{{index}}' value='{{item.count.quantity}}'></input>
                             <text class='btn' id='add' bindtap='countChange' data-index='{{index}}'>+</text>
                         </view>
                     </view>

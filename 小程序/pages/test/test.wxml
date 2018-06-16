@@ -3,5 +3,7 @@
     <model show='{{show}}' title='标题，提示' content='这是一条内容' bind:cancel='cancel' bind:confirm='confirm'></model>
     <button bindtap='click'>btn</button>
 </view>
-<text>pppp</text>
-<text>pppp</text>
+<view>
+	<rate value='{{value}}' size='{{size}}' bind:change='change'></rate>
+	<rate value='{{value2}}' size='{{size}}' count='10' bind:change='change2'  disable='{{disable}}'></rate>
+</view>

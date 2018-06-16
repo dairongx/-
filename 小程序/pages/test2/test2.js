@@ -46,14 +46,14 @@ Page({
 		pros = citysData.map(el => el.name)
 		pro = pros[addr[0]]
 		if (citysData[arr[0]].sub) {
-			citys = citysData[arr[0]].sub.map(el => el.name)
+			citys = citysData[addr[0]].sub.map(el => el.name)
 			city = citys[addr[1]]
 		} else {
 			citys = []
 			city = ''
 		}
-		if (citysData[arr[0]].sub[arr[1]].sub) {
-			cons = citysData[arr[0]].sub[arr[1]].sub.map(el => el.name)
+		if (citysData[addr[0]].sub[addr[1]].sub) {
+			cons = citysData[addr[0]].sub[addr[1]].sub.map(el => el.name)
 			con = cons[addr[2]]
 		} else {
 			cons = []

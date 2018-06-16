@@ -1,0 +1,11 @@
+<!--componets/rate/rate.wxml-->
+<view class='rate' bindtouchmove='touchMove' bindtouchend='touchEnd'>
+  <view>
+    <view class='rate_on' wx:for="{{newval}}" style="width: {{size}}px;height: {{size}}px;margin: 0 {{margin}}px;" wx:key="index">
+      <image src='./img/xing-1.png'></image>
+    </view>
+    <view class='rate_n' wx:for="{{count-newval}}" style="width: {{size}}px;height: {{size}}px;margin: 0 {{margin}}px;" wx:key="index">
+      <image src='./img/xing.png'></image>
+    </view>
+  </view>
+</view>
