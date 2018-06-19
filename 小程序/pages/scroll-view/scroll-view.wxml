@@ -1,0 +1,12 @@
+<!--pages/scroll-view/scroll-view.wxml-->
+<button bindtap='scroll'>scroll</button>
+<scroll-view 
+	scroll-y 
+	scroll-into-view='{{into}}'
+	scroll-with-animation='{{true}}'>
+	<view id='a1'>1111111111</view>
+	<view id='a2'>2222222222</view>
+	<view id='a3'>3333333333</view>
+	<view id='a4'>4444444444</view>
+	<view id='a5'>5555555555</view>
+</scroll-view>

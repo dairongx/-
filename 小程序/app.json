@@ -3,7 +3,10 @@
 		"pages/index/index",
 		"pages/test/test",
 		"pages/cart/cart",
-		"pages/test2/test2"
+		"pages/test2/test2",
+		"pages/scroll-view/scroll-view",
+		"pages/swiper/swiper",
+		"pages/toast/toast"
 	],
 	"window": {
 		"backgroundTextStyle": "light",

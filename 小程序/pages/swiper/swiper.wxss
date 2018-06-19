@@ -1,0 +1,35 @@
+/* pages/swiper/swiper.wxss */
+.swiper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+swiper {
+  margin: 0 15vw;
+  padding-top: 10vh;
+  height: 60vh;
+}
+
+swiper image {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper .prev, .swiper .next {
+  position: absolute;
+  top: 30%;
+  width: 80rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 60rpx;
+}
+
+.swiper .prev {
+  left: 2vw;
+}
+
+.swiper .next {
+  right: 2vw;
+}
+

@@ -1,0 +1,22 @@
+<!--pages/swiper/swiper.wxml-->
+<view class='swiper'>
+  <swiper 
+  	current="{{current}}" 
+	bindchange='swiperChange'
+	indicator-dots='{{dots}}'
+	autoplay='{{autoplay}}'
+	circular='{{circular}}'>
+    <block wx:for="{{imgUrls}}" wx:key='index'>
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='control'>
+	<image src='./img/g3_03.png' class='prev' bindtap='prev'></image>
+	<image src='./img/g2_03.png' class='next' bindtap='next'></image>
+  </view>
+  <button bindtap='dots'>dots</button>
+  <button bindtap='autoplay'>autoplay</button>
+  <button bindtap='circular'>circular</button>
+</view>

@@ -71,6 +71,27 @@ js:
 
 ![Alt text](./img/e.jpg)
 
+### 模板，使用is属性获取使用的模板，is属性也接受一个三元表达式使用不同的模板
+```
+<template name="tem">
+	<view>{{name}}</view>
+	<text>{{age}}</text>
+</template>
+
+<view wx:for="{{arr}}">
+	<template is="tem" data="{{...item}}" />
+</view>
+```
+
+
+### 引用，import 和include  可以使用其他wxml中的模板
+```
+    <import src="item.wxml"/>
+    <include src="item.wxml"/>
+    import 有作用域，只能在引用了的wxml中使用
+    include相当于帮引入的文件拷贝到include位置上 
+```
+
 ## wxss
 与css一致，多了一种尺寸单位rpx
 ### rpx：可根据屏幕进行自适应

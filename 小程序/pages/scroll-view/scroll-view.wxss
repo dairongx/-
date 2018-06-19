@@ -1,0 +1,16 @@
+/* pages/scroll-view/scroll-view.wxss */
+::-webkit-scrollbar{
+	width: 0;
+	height: 0;
+	background-color: transparent;
+}
+
+scroll-view{
+	width: 100vw;
+	height: 80vh;
+}
+
+scroll-view view{
+	height: 50vh;
+	text-align: center;
+}
