@@ -7,3 +7,6 @@
 	<rate value='{{value}}' size='{{size}}' bind:change='change'></rate>
 	<rate value='{{value2}}' size='{{size}}' count='10' bind:change='change2'  disable='{{disable}}'></rate>
 </view>
+<view>
+<date></date>
+</view>

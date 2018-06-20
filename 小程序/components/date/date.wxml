@@ -1,0 +1,20 @@
+<!--componets/date/date.wxml-->
+<view class='date'>
+    <view class='date_top'>
+        <text>{{year}}年{{month}}月</text>
+        <view>
+            <image src='img/prev.png' bindtap='prev'></image>
+            <image src='img/next.png' bindtap='next'></image>
+        </view>
+    </view>
+    <view class='date_week'>
+        <text wx:for='{{weeks}}' wx:key='index'>{{item}}</text>
+    </view>
+    <view class='date_content'>
+        <text wx:for='{{dates}}' 
+			class="{{(item==now[2]&&year==now[0]&&month==now[1]&&date==now[2])?'on':''}}{{(index<day||((index-day+1)>months[month-1]))?'other':''}}{{ch==index?'ch':''}}" 
+			wx:key='index' 
+			data-index='{{index}}' 
+			bindtap='choose'>{{item}}</text>
+    </view>
+</view>

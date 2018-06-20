@@ -1,6 +1,7 @@
 {
 	"usingComponents": {
 		"model": "../../components/dialog/dialog",
-		"rate": "../../components/rate/rate"
+		"rate": "../../components/rate/rate",
+		"date": "../../components/date/date"
 	}
 }
