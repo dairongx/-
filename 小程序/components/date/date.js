@@ -19,16 +19,18 @@ Component({
 		date: 0,
 		day: 0,
 		now: [],
-		ch: -1
+		ch: -1,
+		startX: 0,
+		startY: 0,
+		endX: 0,
+		endY: 0
 	},
 
 	/**
 	 * 组件的方法列表
 	 */
 	methods: {
-		monthInit: function () {
-			let now = new Date()
-			let year = now.getFullYear()
+		monthInit: function (year) {
 			let that = this
 			let isleapyear = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)
 			let months
@@ -44,6 +46,7 @@ Component({
 		init: function (now) {
 			let that = this
 			let year = now.getFullYear()
+			that.monthInit(year)
 			let month = parseInt(now.getMonth()) + 1
 			let date = now.getDate()
 			now.setDate(1)
@@ -110,15 +113,44 @@ Component({
 			}
 			this.init(next)
 		},
-		choose:function(e){
+		choose: function (e) {
 			let index = e.currentTarget.dataset.index
 			this.setData({
 				ch: index
 			})
+		},
+		touchStart: function (e) {
+			let that = this
+			that.setData({
+				startX: e.touches[0].pageX,
+				startY: e.touches[0].pageY
+			})
+		},
+		touchMove: function (e) {
+			let that = this
+			that.setData({
+				endX: e.touches[0].pageX,
+				endY: e.touches[0].pageY
+			})
+		},
+		touchEnd: function () {
+			let that = this,
+				startX = that.data.startX,
+				startY = that.data.startY,
+				endX = that.data.endX,
+				endY = that.data.endY,
+				x = startX - endX,
+				y = startY - endY;
+
+			if (x > 15) {
+				that.next()
+			}
+			if (x < -15) {
+				that.prev()
+			}
 		}
 	},
 	ready: function () {
-		this.monthInit()
 		let now = new Date()
 		let year = now.getFullYear()
 		let month = parseInt(now.getMonth()) + 1

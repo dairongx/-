@@ -1,5 +1,5 @@
 <!--componets/date/date.wxml-->
-<view class='date'>
+<view class='date' bindtouchstart='touchStart' bindtouchmove='touchMove' bindtouchend='touchEnd'>
     <view class='date_top'>
         <text>{{year}}年{{month}}月</text>
         <view>
