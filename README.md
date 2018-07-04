@@ -4,5 +4,6 @@
 * [setData](小程序/setData.md)
 * [组件](小程序/组件.md)
 * [交互反馈](小程序/交互反馈.md)
+* [问题](小程序/遇到的问题.md)
 ## React
 * [React基础](react/react_test/test1/README.md)

@@ -68,17 +68,81 @@ React组件名首字母必须大写
         }
     })
 ```
+#### props
+父组件传递给子组件的数据，在子组件不能直接修改（只读），只能通过父组件修改
+- 数据从上到下传递
+```
+	<Child name={js表达式}></Child>
+	<Child name='haha'></Child>
+```
+- props属性默认为true，以下2种写法效果一致
+```
+	<Child show={true} />
+	<Child show/>
+```
+- 特殊props属性：props.children(相当于slot)，可以接受jsx、js表达式、组件、Function作为子元素，Boolean、null、undefined则会被忽略
+```
+	function Parent(props){
+		return (
+			<div>{props.children}</div>
+		)
+	}
+	function Child(props){
+		return (
+			<Parent>
+				<div>child</div>
+			</Parent>
+		)
+	}
+```
+- 可以使用prop-types这个库进行props类型检查
+```
+	import PropTypes from 'prop-types'
+	class Child extends Component{
+		render(){
+			return (<div>{this.props.name}</div>)
+		}
+	}
+	Child.propTypes={
+		name: PropTypes.string        // props.name 的类型为string
+	}
+```
+	- 可以检查的类型有： bool、string、array、func、number、symbol、object
+	- 也可以是一个react元素
+	- 使用PropTypes.instansof(Person)  // 检查是否为Person的一个实例
+	- 使用PropTypes.oneOf(['a','b'])  // 检查是否为数组中的一个元素
+	- 使用PropTypes.oneOfType检查类型是否为其中的一种
+	```
+		PropTypes.oneOfType([    // 检查类型是否为其中的一个
+			PropTypes.bool,
+			PropTypes.string,
+		])
+	```
+	- arrayOf、objectOf :  PropTypes.arrayOf(PropTypes.number)  // 全是数字的数组。
+- 默认props值
+```
+	Child.defaultProps = {
+		name: 'asd'
+	}
+```
+#### state:state是组件渲染时的数据依据
+```
+	通过类构造函数初始化 this.state = { obj }
 
+	不能直接修改state， this.state.date = '123';  // 错误
+	需要通过setState来改变state的值 this.setState（{obj}）
 
+	调用setState之后，并不会立即改变状态值，而是将修改的状态放入一个队列中，在多次调用setState时，可能会将多次修改合并成一次修改。
 
-
-
-
-
-
-
-
-
+	当state异步更新时，不能采用对象的方式，可以接受一个函数
+		this.setState((prevState，props)=>{
+			// prevState  当前修改前的state
+			// props  
+			 return{
+				  data: prevState.data+1
+			 }
+		})
+```
 
 
 
